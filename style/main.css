@@ -1,0 +1,53 @@
+:root {
+  --main-color: #9361f5;
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: "Exo 2", sans-serif;
+}
+
+.btn-addTask {
+  background-color: var(--main-color);
+  padding: 10px 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: white;
+}
+
+.custom-input:focus {
+  box-shadow: 0 0 0 5px #9261f585;
+}
+
+.task-container .icon {
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.task-container .task-name {
+  cursor: pointer;
+  position: relative;
+}
+
+.task-container .task-name::after {
+  content: "click to completed";
+  position: absolute;
+  top: -100%;
+  left: 100%;
+  color: white;
+  background-color: var(--main-color);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 8px;
+  text-wrap: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.5s opacity;
+}
+
+.task-container .task-name:hover::after {
+  opacity: 1;
+}
